@@ -46,7 +46,7 @@ IE8+ ff chrome
 首选把项目clone下来，将adminlite-plus目录拷贝至tomcat的webapps目录，启动tomcat访问：
 `http://localhost:8080/adminlite-plus`
 
-[!Image](https://pic4.zhimg.com/80/v2-0740131e34c2fc4672c0e93def786366_hd.jpg)
+![Image](https://pic4.zhimg.com/80/v2-0740131e34c2fc4672c0e93def786366_hd.jpg)
 
 对于使用者来说不需要过多关注上边的具体实现，下载项目后添加新的模块只要按照下面的步骤即可：
 
