@@ -34,7 +34,7 @@ define(['dialog','highcharts-exporting', 'common', 'knockout', 'knockout-mapping
         //拉取统计数据
         initStatisticsData: function () {
             var that = this;
-            $.post('json/userAndTenantStatistics.json', function (response) {
+            $.get('json/userAndTenantStatistics.json', function (response) {
                 if (common.dealResponse(response)) {
                     ko.mapping.fromJS(response.data, that.statisic);
                 }
@@ -65,7 +65,7 @@ define(['dialog','highcharts-exporting', 'common', 'knockout', 'knockout-mapping
         //应用入口
         queryAppByHumanId: function () {
             var that = this;
-            $.post('json/queryAppByHumanId.json', function (response) {
+            $.get('json/queryAppByHumanId.json', function (response) {
                 if (common.dealResponse(response)) {
                     var appList = response.data;
                     if (appList && appList.length > 0) {
@@ -144,7 +144,7 @@ define(['dialog','highcharts-exporting', 'common', 'knockout', 'knockout-mapping
             });
         },
         requestTenantStatisticsData: function () {
-            $.post('json/initTenantStatistics.json', function (response) {
+            $.get('json/initTenantStatistics.json', function (response) {
                 if (common.dealResponse(response)) {
                     var series = dashbord.tenantChart.series[0];
                     var users = response.data.users;
@@ -293,7 +293,7 @@ define(['dialog','highcharts-exporting', 'common', 'knockout', 'knockout-mapping
 
         },
         requestAppStatisticsData: function () {
-            $.post('json/initAppStatistics.json', {year: dashbord.queryYear()}, function (response) {
+            $.get('json/initAppStatistics.json', {year: dashbord.queryYear()}, function (response) {
                 if (common.dealResponse(response)) {
                     var series = dashbord.chart.series;
                     var published = response.data.published;

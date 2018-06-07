@@ -34,7 +34,7 @@ define(['unit-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
 
     //查询岗位数据
     function loadRoleTree(that, fn) {
-        $.post('json/queryAllRoleTree.json', function (response) {
+        $.get('json/queryAllRoleTree.json', function (response) {
             if (common.dealResponse(response)) {
                 if (fn) fn(response);
             }
@@ -44,7 +44,7 @@ define(['unit-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
 
     //根据岗位id查询岗位基本信息
     function loadRoleInfo(that, roleId) {
-        $.post('json/queryRoleById.json', {roleId: roleId}, function (response) {
+        $.get('json/queryRoleById.json', {roleId: roleId}, function (response) {
             if (common.dealResponse(response)) {
                 ko.mapping.fromJS(response.data, that.roleInfo);
             }
@@ -270,7 +270,7 @@ define(['unit-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
         };
         //加载平台菜单树
         this.loadAuthTree = function (roleId) {
-            $.post('json/queryResourceTree.json', function (response) {
+            $.get('json/queryResourceTree.json', function (response) {
                 if (common.dealResponse(response)) {
                     var resources = response.data;
                     var navMenu = [];
@@ -324,7 +324,7 @@ define(['unit-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
                         }
                     }, appMenu);
                     //已分配权限check
-                    $.post('json/queryResourceByRoleId.json', {roleId: roleId}, function (response) {
+                    $.get('json/queryResourceByRoleId.json', {roleId: roleId}, function (response) {
                         if (common.dealResponse(response)) {
                             var resourceList = response.data;
                             if (!resourceList || resourceList.length == 0)

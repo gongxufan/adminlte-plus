@@ -34,7 +34,7 @@ define(['unit-js', 'role-js', 'dialog', 'common', 'knockout', 'knockout-mapping'
 
     //查询人员树
     function loadHumanTree(that) {
-        $.post('json/queryAllHumanTree.json', function (response) {
+        $.get('json/queryAllHumanTree.json', function (response) {
             if (common.dealResponse(response)) {
                 $.fn.zTree.init($("#human-tree-list"), setting, response.data);
                 //加载第一个部门节点信息
@@ -55,7 +55,7 @@ define(['unit-js', 'role-js', 'dialog', 'common', 'knockout', 'knockout-mapping'
 
     //根据人员id查询人员本信息
     function loadHumanInfo(that, humanId) {
-        $.post('json/queryHumanById.json', {humanId: humanId}, function (response) {
+        $.get('json/queryHumanById.json', {humanId: humanId}, function (response) {
             if (common.dealResponse(response)) {
                 that.humanInfo.humanpassword('');
                 ko.mapping.fromJS(response.data, that.humanInfo);
@@ -446,7 +446,7 @@ define(['unit-js', 'role-js', 'dialog', 'common', 'knockout', 'knockout-mapping'
         };
         //加载人员权限
         this.loadAuthTree = function (humanId) {
-            $.post('json/queryResourceTree.json', function (response) {
+            $.get('json/queryResourceTree.json', function (response) {
                 if (common.dealResponse(response)) {
                     var resources = response.data;
                     var navMenu = [];
@@ -510,7 +510,7 @@ define(['unit-js', 'role-js', 'dialog', 'common', 'knockout', 'knockout-mapping'
                         }
                     }, appMenu);
                     //已分配权限check
-                    $.post('json/queryResourceByHumanId.json', {humanId: humanId}, function (response) {
+                    $.get('json/queryResourceByHumanId.json', {humanId: humanId}, function (response) {
                         if (common.dealResponse(response)) {
                             var resourceList = response.data;
                             if (!resourceList || resourceList.length == 0) {

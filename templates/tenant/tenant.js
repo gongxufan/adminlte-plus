@@ -324,7 +324,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                 });
             };
             this.loadHumanTree = function () {
-                $.post('json/queryAllHumanTree.json', function (response) {
+                $.get('json/queryAllHumanTree.json', function (response) {
                     var nodes = response.data;
                     if (nodes) {
                         $.fn.zTree.init($("#human-tree-list-tenant"), {
@@ -397,7 +397,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                 this.loadApp();
             };
             this.loadApp = function () {
-                $.post('json/queryAppDataTree.json', function (response) {
+                $.get('json/queryAppDataTree.json', function (response) {
                     $.fn.zTree.init($("#tenant-app-tree-list"), {
                         view: {
                             selectedMulti: false

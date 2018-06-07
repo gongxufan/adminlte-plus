@@ -33,7 +33,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', /* 'jquery
 
     //查询部门数据
     function loadUnitTree(that) {
-        $.post('json/queryAllUnitTree.json', function (response) {
+        $.get('json/queryAllUnitTree.json', function (response) {
             if (common.dealResponse(response)) {
                 $.fn.zTree.init($("#unit-tree-list"), setting, response.data);
                 var treeObj = common.tree.getTreeObj('unit-tree-list');
@@ -51,7 +51,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', /* 'jquery
 
     //查询岗位
     function loadRoles(that, unitId) {
-        $.post('json/queryRolesByUnitId.json', {unitId: unitId}, function (response) {
+        $.get('json/queryRolesByUnitId.json', {unitId: unitId}, function (response) {
             if (common.dealResponse(response))
                 ko.mapping.fromJS(response.data, that.roleList);
         });
@@ -59,7 +59,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', /* 'jquery
 
     //根据部门id查询部门基本信息
     function loadUnitInfo(that, unitId) {
-        $.post('json/queryUnitByUnitId.json', {unitId: unitId}, function (response) {
+        $.get('json/queryUnitByUnitId.json', {unitId: unitId}, function (response) {
             if (common.dealResponse(response)) {
                 ko.mapping.fromJS(response.data, that.unitInfo);
             }

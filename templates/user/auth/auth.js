@@ -219,7 +219,7 @@ define(['role-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
             };
 
             this.loadAuthTree = function () {
-                $.post('json/queryResourceTree.json', function (response) {
+                $.get('json/queryResourceTree.json', function (response) {
                     if (common.dealResponse(response)) {
                         $.fn.zTree.init($("#auth-resource-tree-list"), {
                             view: {
