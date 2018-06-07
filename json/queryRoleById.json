@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "roleid": 4004,
+    "rolename": "新增岗位",
+    "roledescription": "新增岗位描述",
+    "unitid": 1,
+    "displayorder": 1,
+    "roleproperty": 0
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

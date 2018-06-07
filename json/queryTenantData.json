@@ -1,0 +1,163 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": [
+    {
+      "tenantid": 4000,
+      "tenantname": "超级管理员租户",
+      "tenantdesc": "超级管理员租户",
+      "typeid": 1,
+      "createtime": "2018-05-11 17:57:27",
+      "displayorder": 1,
+      "humanList": [
+        {
+          "humanid": 354,
+          "humancode": "xtcsy",
+          "humanname": "系统测试员",
+          "humandescription": "系统测试员",
+          "unitid": 272,
+          "displayorder": 342,
+          "unitName": "窗口办"
+        },
+        {
+          "humanid": 353,
+          "humancode": "xtgly",
+          "humanname": "系统管理员",
+          "humandescription": "系统管理员",
+          "unitid": 272,
+          "displayorder": 283,
+          "unitName": "窗口办"
+        },
+        {
+          "humanid": 373,
+          "humancode": "lg",
+          "humanname": "李刚",
+          "humandescription": "李刚",
+          "unitid": 8,
+          "displayorder": 5,
+          "unitName": "厅领导"
+        },
+        {
+          "humanid": 448,
+          "humancode": "htj",
+          "humanname": "和廷军",
+          "humandescription": "和廷军",
+          "unitid": 9,
+          "displayorder": 156,
+          "unitName": "办公室"
+        }
+      ],
+      "appList": [
+        {
+          "appid": 4001,
+          "humanid": 353,
+          "unitid": 272,
+          "appname": "智能审批系统",
+          "appdesc": "智能审批系统",
+          "loginurl": "http://localhost:8888/base-platform/#/app/publish"
+        },
+        {
+          "appid": 4000,
+          "humanid": 353,
+          "unitid": 272,
+          "appname": "政务审批系统",
+          "appdesc": "政务审批系统",
+          "loginurl": "http://localhost:8888/base-platform/process-editor/diagram-viewer/index.html?processDefinitionId=huiqian:3:5015&processInstanceId=5028"
+        }
+      ]
+    },
+    {
+      "tenantid": 4020,
+      "tenantname": "系统管理员租户",
+      "tenantdesc": "系统管理员租户",
+      "typeid": 2,
+      "createtime": "2018-04-15 22:18:00",
+      "displayorder": 2,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4021,
+      "tenantname": "普通用户租户",
+      "tenantdesc": "普通用户租户",
+      "typeid": 3,
+      "createtime": "2018-04-15 22:18:19",
+      "displayorder": 3,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4022,
+      "tenantname": "test",
+      "tenantdesc": "test",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:24:47",
+      "displayorder": 4,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4023,
+      "tenantname": "test2",
+      "tenantdesc": "test",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:24:58",
+      "displayorder": 5,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4024,
+      "tenantname": "test3",
+      "tenantdesc": "test3",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:25:04",
+      "displayorder": 6,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4025,
+      "tenantname": "test4",
+      "tenantdesc": "test4",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:25:10",
+      "displayorder": 7,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4026,
+      "tenantname": "test5",
+      "tenantdesc": "test4",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:25:17",
+      "displayorder": 8,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4027,
+      "tenantname": "test6",
+      "tenantdesc": "test4",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:25:26",
+      "displayorder": 9,
+      "humanList": [],
+      "appList": []
+    },
+    {
+      "tenantid": 4028,
+      "tenantname": "test7",
+      "tenantdesc": "test7",
+      "typeid": 1,
+      "createtime": "2018-04-15 22:25:33",
+      "displayorder": 10,
+      "humanList": [],
+      "appList": []
+    }
+  ],
+  "recordsTotal": 16,
+  "recordsFiltered": 16,
+  "draw": 1
+}

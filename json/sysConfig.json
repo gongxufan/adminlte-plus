@@ -1,0 +1,174 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "bizKindData": [
+      {
+        "bizkindid": 1,
+        "bizkindname": "核心业务"
+      },
+      {
+        "bizkindid": 2,
+        "bizkindname": "办公业务"
+      },
+      {
+        "bizkindid": 4,
+        "bizkindname": "通用业务"
+      }
+    ],
+    "domain": "http://localhost:8888/base-platform/",
+    "dutyData": [
+      {
+        "dutyid": 1,
+        "dutyname": "党组书记",
+        "dutydescription": null,
+        "displayorder": 1,
+        "priority": 0
+      },
+      {
+        "dutyid": 2,
+        "dutyname": "局长",
+        "dutydescription": null,
+        "displayorder": 2,
+        "priority": 0
+      },
+      {
+        "dutyid": 3,
+        "dutyname": "副局长",
+        "dutydescription": null,
+        "displayorder": 3,
+        "priority": 0
+      },
+      {
+        "dutyid": 4,
+        "dutyname": "纪检组长",
+        "dutydescription": null,
+        "displayorder": 4,
+        "priority": 0
+      },
+      {
+        "dutyid": 5,
+        "dutyname": "矿管分局局长",
+        "dutydescription": null,
+        "displayorder": 5,
+        "priority": 0
+      },
+      {
+        "dutyid": 6,
+        "dutyname": "调研员",
+        "dutydescription": null,
+        "displayorder": 6,
+        "priority": 0
+      },
+      {
+        "dutyid": 7,
+        "dutyname": "助理调研员",
+        "dutydescription": null,
+        "displayorder": 7,
+        "priority": 0
+      },
+      {
+        "dutyid": 9,
+        "dutyname": "科长",
+        "dutydescription": null,
+        "displayorder": 9,
+        "priority": 0
+      },
+      {
+        "dutyid": 8,
+        "dutyname": "主任",
+        "dutydescription": null,
+        "displayorder": 8,
+        "priority": 0
+      },
+      {
+        "dutyid": 10,
+        "dutyname": "副主任",
+        "dutydescription": null,
+        "displayorder": 10,
+        "priority": 0
+      },
+      {
+        "dutyid": 11,
+        "dutyname": "副科长",
+        "dutydescription": null,
+        "displayorder": 11,
+        "priority": 0
+      },
+      {
+        "dutyid": 12,
+        "dutyname": "主任科员",
+        "dutydescription": null,
+        "displayorder": 12,
+        "priority": 0
+      },
+      {
+        "dutyid": 13,
+        "dutyname": "副主任科员",
+        "dutydescription": null,
+        "displayorder": 13,
+        "priority": 0
+      },
+      {
+        "dutyid": 14,
+        "dutyname": "科员",
+        "dutydescription": null,
+        "displayorder": 14,
+        "priority": 0
+      }
+    ],
+    "resourceTypeData": [
+      {
+        "id": 1,
+        "typeid": 1,
+        "typename": "平台菜单",
+        "typedesc": "系统平台菜单权限"
+      },
+      {
+        "id": 2,
+        "typeid": 2,
+        "typename": "系统功能",
+        "typedesc": "系统功能权限"
+      },
+      {
+        "id": 3,
+        "typeid": 3,
+        "typename": "应用菜单",
+        "typedesc": "接入应用系统的菜单，外部应用系统的ui内嵌到平台"
+      }
+    ],
+    "bizTypeData": [
+      {
+        "biztypeid": 1,
+        "biztypename": "案卷业务"
+      },
+      {
+        "biztypeid": 2,
+        "biztypename": "公文业务"
+      }
+    ],
+    "tenantTypeData": [
+      {
+        "id": 1,
+        "typeid": 1,
+        "typename": "超级管理员租户",
+        "typedesc": "超级管理员租户"
+      },
+      {
+        "id": 2,
+        "typeid": 2,
+        "typename": "系统管理员租户",
+        "typedesc": "系统管理员租户"
+      },
+      {
+        "id": 3,
+        "typeid": 3,
+        "typename": "普通用户租户",
+        "typedesc": "普通用户租户"
+      }
+    ]
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

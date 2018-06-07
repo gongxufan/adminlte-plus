@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": [
+    {
+      "id": "4000",
+      "pId": null,
+      "name": "政务审批系统",
+      "icon": "image/icon/app.png",
+      "iconOpen": null,
+      "iconClose": null,
+      "type": null,
+      "open": false,
+      "isHidden": false,
+      "isParent": false,
+      "data": null,
+      "hidden": false
+    },
+    {
+      "id": "4001",
+      "pId": null,
+      "name": "智能审批系统",
+      "icon": "image/icon/app.png",
+      "iconOpen": null,
+      "iconClose": null,
+      "type": null,
+      "open": false,
+      "isHidden": false,
+      "isParent": false,
+      "data": null,
+      "hidden": false
+    }
+  ],
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

@@ -1,0 +1,16 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "humanCount": 422,
+    "roleCount": 132,
+    "normalTenantCount": 1,
+    "unitCount": 57,
+    "adminTenantCount": 1,
+    "tenantCount": 16,
+    "superTenantCount": 14
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

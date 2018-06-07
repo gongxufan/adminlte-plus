@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>用户登录</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"/>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="fonts/Ionicons/css/ionicons.min.css"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/lib/select2.min.css"/>
+    <link rel="stylesheet" href="css/lib/select2-bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <!-- iCheck -->
+    <link rel="stylesheet" href="css/lib/icheck-blue.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/lib/shim/html5shiv.min.js"></script>
+    <script src="js/lib/shim/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="#"><b>登录</b>adminlite-plus</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">adminlite-plus</p>
+
+        <form action="/adminlite-plus" method="post">
+            <div class="form-group has-feedback">
+                <input type="hidden" class="form-control" id="humanid" name="humanid"/>
+                <select class="form-control select2" data-placeholder="账号"
+                        style="width: 100%;">
+                </select>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="密码" name="humanpassword"/>
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div class="help-block" style="color: #dd4b39;font-size: 10px" th:text='${msg}'></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                       <!-- <label style="font-size: 10px">
+                            <input type="checkbox"> 记住我
+                        </label>-->
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">提交</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+
+<!--
+        <a href="#" style="font-size: 10px">忘记密码</a><br>
+        <a href="register.html" class="text-center" style="font-size: 10px">注册</a>-->
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<script src="js/lib/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/select2/select2.full.min.js"></script>
+<!-- iCheck -->
+<script src="js/lib/jquery.plugin/icheck.min.js"></script>
+<script>
+    $(function () {
+        $('.select2').select2({
+            theme: "bootstrap",
+            ajax: {
+                type: "post",
+                url: 'json/queryHumanByCode.json',
+                data: function (params) {
+                    var query = {
+                        humanCode: params.term,
+                        type: 'public'
+                    };
+                    // Query parameters will be ?search=[term]&type=public
+                    return query;
+                },
+                processResults: function (response) {
+                    // Tranforms the top-level key of the response object from 'items' to 'results'
+                    var results = [];
+                    if (response && response.data && response.data.length > 0) {
+                        for (var i = 0; i < response.data.length; i++) {
+                            var obj = response.data[i];
+                            results.push({
+                                id: obj.humanid,
+                                text: obj.humanname
+                            });
+                        }
+                    }
+                    return {
+                        results: results
+                    };
+                }
+            }
+        }).on('select2:select', function (evt) {
+            if (!evt) {
+
+            } else {
+                document.getElementById('humanid').value = evt.params.data.id;
+            }
+        });
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "unitid": 1,
+    "unitname": "云南省国土资源厅",
+    "unitdescription": "云南省国土资源厅机关处室",
+    "createdate": "2005-03-22 15:40:00",
+    "validfromdate": "2005-03-22 15:40:00",
+    "validflag": 1,
+    "displayorder": 100001,
+    "priority": 30,
+    "cantonid": 0,
+    "mapid": 126
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

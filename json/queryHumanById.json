@@ -1,0 +1,40 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "humanid": 448,
+    "humancode": "htj",
+    "humanname": "和廷军",
+    "humandescription": "和廷军",
+    "createdate": "2012-10-24 08:51:50",
+    "validfromdate": "2012-10-24 08:51:50",
+    "validflag": 1,
+    "unitid": 9,
+    "displayorder": 156,
+    "priority": 30,
+    "humanproperty": 4,
+    "portraitid": 1,
+    "hideflag": 0,
+    "isneedcalogon": 0,
+    "humanstate": 0,
+    "visible": 1,
+    "roleList": [
+      {
+        "roleid": 35
+      },
+      {
+        "roleid": 223
+      },
+      {
+        "roleid": 282
+      },
+      {
+        "roleid": 606
+      }
+    ],
+    "unitName": "办公室"
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

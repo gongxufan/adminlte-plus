@@ -1,0 +1,44 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": [
+    {
+      "roleid": 48,
+      "rolename": "地籍处处长",
+      "roledescription": "地籍处处长",
+      "unitid": 14,
+      "roleproperty": 0
+    },
+    {
+      "roleid": 49,
+      "rolename": "地籍处副处长",
+      "roledescription": "副处长",
+      "unitid": 14,
+      "roleproperty": 0
+    },
+    {
+      "roleid": 421,
+      "rolename": "二调办",
+      "roledescription": "二调办",
+      "unitid": 14,
+      "roleproperty": 0
+    },
+    {
+      "roleid": 225,
+      "rolename": "地籍管理处",
+      "roledescription": "新增岗位225",
+      "unitid": 14,
+      "roleproperty": 0
+    },
+    {
+      "roleid": 50,
+      "rolename": "地籍处经办人",
+      "roledescription": "经办人",
+      "unitid": 14,
+      "roleproperty": 0
+    }
+  ],
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

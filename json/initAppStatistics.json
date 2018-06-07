@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "refused": [],
+    "accepted": [
+      {
+        "x": 4,
+        "y": 2
+      }
+    ],
+    "published": [
+      {
+        "x": 4,
+        "y": 14
+      }
+    ]
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

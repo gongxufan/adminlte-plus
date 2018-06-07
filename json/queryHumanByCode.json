@@ -1,0 +1,24 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": [
+    {
+      "humanid": 353,
+      "humanname": "系统管理员",
+      "roleList": []
+    },
+    {
+      "humanid": 354,
+      "humanname": "系统测试员",
+      "roleList": []
+    },
+    {
+      "humanid": 266,
+      "humanname": "admin",
+      "roleList": []
+    }
+  ],
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

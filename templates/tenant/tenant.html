@@ -1,0 +1,148 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-solid">
+            <!--<div class="box-header">
+                <h3 class="box-title">租户列表</h3>
+            </div>-->
+            <div class="box-body">
+                <table id="tenant-list-table"  class="table table-bordered table-striped">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-add-tenant">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" data-bind="text:popTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <div >
+                    <ul class="nav nav-tabs nav-justified control-sidebar-tabs " style="width: 400px">
+                        <li class="active"><a href="#tenant-baseInfo-tab" data-toggle="tab"><i
+                                class="fa fa-home"><span>基本信息</span></i></a></li>
+                        <li><a href="#tenant-human-list-tab" data-toggle="tab"><i class="fa fa-list"><span>配置人员</span></i></a></li>
+                        <li><a href="#tenant-app-list-tab" data-toggle="tab"><i class="fa fa-sign-in"><span>配置应用</span></i></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tenant-baseInfo-tab" class="tab-pane active">
+                            <form class="form-horizontal">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="tenantid" class="col-sm-2 control-label">租户标识</label>
+
+                                        <div class="col-sm-4">
+                                            <input data-bind="value:tenantInfo.tenantid"   type="text" class="form-control" id="tenantid" name="tenantid" disabled>
+                                        </div>
+
+                                        <label for="tenantname" class="col-sm-2 control-label">租户名称</label>
+
+                                        <div class="col-sm-4"  data-bind="css:{'has-error': !tenantInfo.tenantname()}">
+                                            <input data-bind="value:tenantInfo.tenantname,valueUpdate:'keyup'" type="text" class="form-control" id="tenantname" name="tenantname"
+                                                   placeholder="租户名称">
+                                            <span class="help-block" data-bind="visible:!tenantInfo.tenantname()">该项不能为空</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="typeid" class="col-sm-2 control-label">租户类型</label>
+
+                                        <div class="col-sm-4">
+                                            <select class="form-control" id="typeid" data-bind="options: typeList,
+                       optionsText: 'typename',optionsValue:'typeid',
+                       value: tenantInfo.typeid">
+                                            </select>
+                                        </div>
+
+                                        <label for="createtime" class="col-sm-2 control-label">创建时间</label>
+
+                                        <div class="col-sm-4">
+                                            <input data-bind="value:tenantInfo.createtime" type="text" class="form-control" id="createtime" name="createtime"
+                                                   disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label  class="col-sm-2 control-label">显示次序</label>
+
+                                        <div class="col-sm-4">
+                                            <input  data-bind="value:tenantInfo.displayorder,valueUpdate:'keyup'" type="text" class="form-control"  name="displayorder"
+                                                    placeholder="序号">
+                                        </div>
+                                        <label for="tenantdesc" class="col-sm-2 control-label">租户描述</label>
+
+                                        <div class="col-sm-4" data-bind="css:{'has-error': !tenantInfo.tenantdesc()}">
+                                <textarea  data-bind="value:tenantInfo.tenantdesc,valueUpdate:'keyup'"  class="form-control" id="tenantdesc" name="tenantdesc"
+                                           placeholder="租户描述"></textarea>
+                                            <span class="help-block" data-bind="visible:!tenantInfo.tenantdesc()">该项不能为空</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="tenant-human-list-tab" class="tab-pane">
+
+                            <div class="box box-solid" >
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">已分配人员<span class="pull-right-container">
+                        <span class="label label-primary pull-right" data-bind="text:allocated()"></span></span>
+                                    </h3>
+                                    <input type="text" id="findHuman-tenant" placeholder="输入关键字查找"/>
+
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-sm btn-default" data-bind="click:resetTenantHumans">重置</button>
+                                    </div>
+                                    <div class="checkbox pull-right" title="只显示已分配的人员" style="margin-right: 5px">
+                                        <label >
+                                            <input type="checkbox" data-bind="checked:filterHumans"> 过滤
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+
+                                    <ul class="ztree"  id="humanList"  style="height: 300px;overflow-y: scroll">
+                                        <ul id="human-tree-list-tenant"></ul>
+                                    </ul>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+
+                        </div>
+                        <div id="tenant-app-list-tab" class="tab-pane">
+                            <div class="box box-solid" >
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">已配置应用<span class="pull-right-container">
+                        <span class="label label-primary pull-right" data-bind="text:appAllocated()"></span></span>
+                                    </h3>
+
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-sm btn-default" data-bind="click:resetTenantHumans">重置</button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul id="tenant-app-tree-list" class="ztree"></ul>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-bind="click:addTenant">保存</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

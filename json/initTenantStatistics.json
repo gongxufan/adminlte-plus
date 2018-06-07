@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": {
+    "users": [
+      {
+        "X": 4,
+        "NAME": "超级管理员租户"
+      }
+    ],
+    "apps": [
+      {
+        "Y": 2,
+        "NAME": "超级管理员租户"
+      }
+    ]
+  },
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}

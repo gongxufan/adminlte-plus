@@ -1,0 +1,53 @@
+{
+  "code": 0,
+  "message": "请求成功",
+  "data": [
+    {
+      "appid": 4000,
+      "humanid": 353,
+      "unitid": 272,
+      "appname": "政务审批系统",
+      "appdesc": "政务审批系统",
+      "appicon": "http://localhost:8888/base-platform/appIcons/4000/Desert.jpg",
+      "loginurl": "http://localhost:8888/base-platform/process-editor/diagram-viewer/index.html?processDefinitionId=huiqian:3:5015&processInstanceId=5028",
+      "createtime": "2018-04-11 22:24:16",
+      "lastmodifytime": "2018-04-16 11:45:32",
+      "displayorder": 1,
+      "humanName": "系统管理员",
+      "unitName": "窗口办",
+      "approvalId": 4000,
+      "applysummary": "test",
+      "applycomments": "test",
+      "applydate": "2018-04-11 22:24:35",
+      "approvaldate": "2018-04-11 22:24:51",
+      "approvalsummary": "1",
+      "approvalcomments": "11",
+      "approvalState": 1
+    },
+    {
+      "appid": 4001,
+      "humanid": 353,
+      "unitid": 272,
+      "appname": "智能审批系统",
+      "appdesc": "智能审批系统",
+      "appicon": "http://localhost:8888/base-platform/appIcons/4001/Hydrangeas.jpg",
+      "loginurl": "http://localhost:8888/base-platform/#/app/publish",
+      "createtime": "2018-04-11 22:42:39",
+      "lastmodifytime": "2018-04-16 11:45:44",
+      "displayorder": 2,
+      "humanName": "系统管理员",
+      "unitName": "窗口办",
+      "approvalId": 4001,
+      "applysummary": "222",
+      "applycomments": "2222",
+      "applydate": "2018-04-11 22:57:40",
+      "approvaldate": "2018-04-11 22:58:10",
+      "approvalsummary": "11112",
+      "approvalcomments": "22322",
+      "approvalState": 1
+    }
+  ],
+  "recordsTotal": 0,
+  "recordsFiltered": 0,
+  "draw": 0
+}
