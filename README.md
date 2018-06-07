@@ -26,6 +26,7 @@ IE8+ ff chrome
 <i data-bind="attr:{'class':resource.resIco}" ></i>
 ```
 这是一个class绑定，如果把class的单引号删除将会报错
+
 3. highchars组件在IE8下需要引入highcharts-oldie模块
 
 4. 主页针对IE的hacker
