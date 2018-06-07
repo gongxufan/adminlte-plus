@@ -169,7 +169,7 @@
             target.addClass('table-bordered');
         }
         if (options.url) {
-            $.post(options.url, options.ajaxParams, function (data) {
+            $.get(options.url, options.ajaxParams, function (data) {
                 target.options.data = data;
                 initData(target, target.options, data);
             });

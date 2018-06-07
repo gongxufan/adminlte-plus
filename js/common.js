@@ -320,7 +320,7 @@ define(['dialog', 'jquery'], function (dialog, $) {
     //读取系统信息
     $.ajax({
         url: 'json/sysConfig.json',
-        type: "POST",
+        type: "GET",
         dataType: 'json',
         async: false,
         success: function (response) {
