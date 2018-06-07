@@ -87,7 +87,9 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'gotoTop']
 在test.html编写HTML代码即可
 
 ## 致谢：
-https://link.zhihu.com/?target=http%3A//knockoutjs.com/documentation/introduction.html
-https://link.zhihu.com/?target=https%3A//github.com/flatiron/director
-https://link.zhihu.com/?target=https%3A//github.com/almasaeed2010/AdminLTE
-https://link.zhihu.com/?target=https%3A//gitee.com/weituotian/AdminLTE-With-Iframe
+```
+https://github.com/almasaeed2010/AdminLTE
+http://knockoutjs.com/documentation/introduction.html
+https://github.com/flatiron/director
+https://gitee.com/weituotian/AdminLTE-With-Iframe
+```
