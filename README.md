@@ -3,7 +3,7 @@
 这是一个传统的后端开发框架。基于jQuery和knockout进行数据双向绑定，提供简单的路由视图切换功能。使用者只需按照固定的模式添加功能模块即可。因为使用require进行模块管理，也便于对系统进行模块划分和功能复用。
 
 除了提供一个脚手架的开发框架之后，系统还默认继承了诸多的jquery插件，并对require进行试了适配，具体的相关库如下：
-···
+```
 datatables
 highcharts
 highcharts-map
@@ -15,7 +15,7 @@ jquery.imgareaselect
 icheck
 select2
 ztree
-···
+```
 关于其具体实现可参考：https://zhuanlan.zhihu.com/p/37796924
 ## 如何使用
 对于使用者来说不需要过多关注上边的具体实现，下载项目后添加新的模块只要按照下面的饿步骤即可：
