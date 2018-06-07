@@ -1,7 +1,7 @@
 define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'gotoTop'], function (dialog, common, ko, mapping, $) {
     ko.mapping = mapping;
 
-    function demo() {
+    function test() {
         //数据初始化和KO绑定
         this.init = function () {
 
@@ -19,5 +19,5 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'gotoTop']
         };
     };
 
-    return new demo();
+    return new test();
 });

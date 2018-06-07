@@ -1,13 +1,12 @@
 define(['knockout', 'controller', 'routes', 'router', 'jquery'], function (ko, controller, routes, Router, $) {
     function dispatch(path) {
-        //controller.breadcrumb.removeAll();
         var route = routes[path];
-        if(!route.hrefUrl) return;
+        if (!route.hrefUrl) return;
         if (route.hrefUrl.indexOf('#') == -1)
             route.hrefUrl = '#' + route.hrefUrl;
-        controller.initJSAndCSS(path,route);
+        controller.initJSAndCSS(path, route);
     }
-    controller.breadcrumb = ko.observableArray();
+
     //初始化路由
     var router = new Router().configure({
         //404
@@ -16,7 +15,7 @@ define(['knockout', 'controller', 'routes', 'router', 'jquery'], function (ko, c
         },
         html5history: false
     });
-    //根据系统平台菜单设置路由
+    //根据系统菜单设置路由
     var sysNavMenus = routes.sysNavMenus;
     if (sysNavMenus && sysNavMenus.length > 0) {
         for (var i = 0; i < sysNavMenus.length; i++) {
@@ -29,12 +28,12 @@ define(['knockout', 'controller', 'routes', 'router', 'jquery'], function (ko, c
                 router.on(obj.hrefUrl, function () {
                     var url = obj.routeUrl;
                     //直接打开子菜单链接
-                    if(obj.parentid)
+                    if (obj.parentid)
                         dispatch(url);
-                    else{//当前是父菜单
+                    else {//当前是父菜单
                         var childResourceList = obj.childResourceList;
                         //有二级菜单
-                        if(childResourceList && childResourceList.length>0)
+                        if (childResourceList && childResourceList.length > 0)
                             dispatch(childResourceList[0].routeUrl);
                         else//只有一个根菜单
                             dispatch(url);

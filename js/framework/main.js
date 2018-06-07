@@ -98,10 +98,14 @@ var paths = {
     'auth-html': 'templates/user/auth.html',
     'auth-js': 'templates/user/auth/auth',
     'auth-css': 'templates/user/auth/auth',
-    //权限管理
+    //demo
     'demo-html': 'templates/demo/demo.html',
     'demo-js': 'templates/demo/demo',
-    'demo-css': 'templates/demo/demo'
+    'demo-css': 'templates/demo/demo',
+    //test
+    'test-html': 'templates/demo/test.html',
+    'test-js': 'templates/test/test',
+    'test-css': 'templates/test/test'
 };
 
 var baseUrl = '/adminlite-plus/';

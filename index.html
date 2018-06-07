@@ -102,21 +102,21 @@
                 <ul class="sidebar-menu tree" data-bind="{visible:isShowPlatform(),foreach:{data:sysNavMenus,as:'resource'}}" data-widget="tree" id="platformMenus"
                     style="">
                     <li class="treeview" style="cursor: pointer" data-bind="{if:!resource.parentid,css:{active:$index() == 0}}">
-                        <a data-bind="attr:{href: '#'+resource.hrefUrl}" onclick="javascript:;"><i data-bind="attr:{class:resource.resIco}" ></i> <span
+                        <a data-bind="attr:{'href': '#'+resource.hrefUrl}" onclick="javascript:;"><i data-bind="attr:{'class':resource.resIco}" ></i> <span
                                 data-bind="text:resource.name"></span>
                             <span  data-bind="if:resource.childResourceList.length > 0" class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                         </a>
                         <ul class="treeview-menu" data-bind="foreach:{data:resource.childResourceList,as:'secondRes'}">
                             <li class="treeview">
-                                <a onclick="javascript:;" data-bind="attr:{href:'#'+secondRes.hrefUrl}">
-                                    <i data-bind="attr:{class:secondRes.resIco}"></i>
+                                <a onclick="javascript:;" data-bind="attr:{'href':'#'+secondRes.hrefUrl}">
+                                    <i data-bind="attr:{'class':secondRes.resIco}"></i>
                                     <span  data-bind="text:secondRes.name"></span>
                                     <span  data-bind="if:secondRes.childResourceList.length > 0"  class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                                 </a>
                                 <ul class="treeview-menu" data-bind="foreach:{data:secondRes.childResourceList,as:'thirdRes'}" >
                                     <li>
-                                        <a onclick="javascript:;" data-bind="attr:{href:'#'+thirdRes.hrefUrl}" >
-                                            <i  data-bind="attr:{class:thirdRes.resIco}" ></i>
+                                        <a onclick="javascript:;" data-bind="attr:{'href':'#'+thirdRes.hrefUrl}" >
+                                            <i  data-bind="attr:{'class':thirdRes.resIco}" ></i>
                                             <span data-bind="text:thirdRes.name"></span>
                                         </a>
                                     </li>

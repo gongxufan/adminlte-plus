@@ -7,7 +7,7 @@ define(['jquery', 'common','index'], function ($, common,index) {
             title: '系统出错了'
         }
     };
-
+    var sysNavMenusObj = index.sysNavMenus;
     function getResource(parentid) {
         for (var i = 0; i < sysNavMenusObj.length; i++) {
             var obj = sysNavMenusObj[i];
@@ -16,8 +16,6 @@ define(['jquery', 'common','index'], function ($, common,index) {
             }
         }
     }
-
-    var sysNavMenusObj = index.sysNavMenus;
     if (sysNavMenusObj && sysNavMenusObj.length > 0) {
         for (var i = 0; i < sysNavMenusObj.length; i++) {
             var obj = sysNavMenusObj[i];

@@ -1,27 +1,23 @@
-define(['common','knockout-multimodels','tab', 'jquery', 'router', 'routes', 'index'], function (common,ko,tab, $) {
-    var initialRun = true;
-
+define(['common', 'knockout-multimodels', 'tab', 'jquery', 'router', 'routes', 'index'], function (common, ko, tab, $) {
     function isEndSharp() { // url end with #
         if (controller.lastUrl != "" && location.toString().indexOf(controller.lastUrl) != -1 &&
             location.toLocaleString().indexOf('#') != -1 && location.hash == "") {
             return true;
         }
-
         return false;
     }
-
     var controller = {
         /**
          * 当前激活的页面和路由参数
          * @param pageName
          * @param routes
          */
-        initJSAndCSS: function (pageName,route) {
+        initJSAndCSS: function (pageName, route) {
             require([pageName + '-js', 'css!' + pageName + '-css'], function (page) {
-                controller.init(pageName, page,route);
+                controller.init(pageName, page, route);
             });
         },
-        init: function (pageName, pageData,route) {
+        init: function (pageName, pageData, route) {
             if (isEndSharp()) {
                 return;
             }
@@ -29,13 +25,13 @@ define(['common','knockout-multimodels','tab', 'jquery', 'router', 'routes', 'in
             tab.addTabs({
                 id: route.resurl,
                 title: route.name,
-                close: route.resurl == '/dashboard'?false:true,
-                url: paths[route.routeUrl +'-html'],
+                close: route.resurl == '/dashboard' ? false : true,
+                url: paths[route.routeUrl + '-html'],
                 isIframe: route.isIframe,
                 urlType: "relative",
-                modelId:route.routeUrl,
-                pageData:pageData,
-                callback:  function(){
+                modelId: route.routeUrl,
+                pageData: pageData,
+                callback: function () {
                     pageData.init();
                     //每一个TAB页签绑定一个数据模型，以modelId进行区分
                     //绑定的数据模型对象也即每个define模块的返回值
@@ -44,21 +40,7 @@ define(['common','knockout-multimodels','tab', 'jquery', 'router', 'routes', 'in
                     pageData.afterRender();
                 }
             });
-        },
-
-        afterRender: function () {
-            if (controller.page().data && controller.page().data.afterRender) {
-                controller.page().data.afterRender();
-            }
-        },
-        page: ko.observable({
-            name: '',
-            data: {
-                init: function () {
-                }
-            }
-        })
+        }
     };
-
     return controller;
 });
