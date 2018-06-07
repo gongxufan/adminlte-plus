@@ -36,7 +36,7 @@ IE8+ ff chrome
     <script src="js/lib/shim/html5shiv.min.js"></script>
     <script src="js/lib/shim/respond.min.js"></script>
     <script src="js/lib/jquery.placeholder.min.js"></script>
-    <![endif]-->
+ <![endif]-->
 ```
 因为使用的require，在IE8下不能直接这样引用，需要作为模块进行加载。比如上边在IE8下会报jQuery不存在的错误，。
 如果你确实需要兼容IE8那么也要将其作为模块来加载。
