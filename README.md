@@ -41,7 +41,9 @@ IE8+ ff chrome
 因为使用的require，在IE8下不能直接这样引用，需要作为模块进行加载。比如上边在IE8下会报jQuery不存在的错误，。
 如果你确实需要兼容IE8那么也要将其作为模块来加载。
 ## 如何使用
-对于使用者来说不需要过多关注上边的具体实现，下载项目后添加新的模块只要按照下面的饿步骤即可：
+首选把项目clone下来，将adminlite-plus目录拷贝至tomcat的webapps目录，启动tomcat访问：http://localhost:8080/adminlite-plus/#/
+[!img](https://pic4.zhimg.com/80/v2-0740131e34c2fc4672c0e93def786366_hd.jpg)
+对于使用者来说不需要过多关注上边的具体实现，下载项目后添加新的模块只要按照下面的步骤即可：
 
 项目目录结构如下：
 ![Image](https://pic3.zhimg.com/80/v2-22e0099d826644d6dcf846249c18a8e7_hd.jpg)
