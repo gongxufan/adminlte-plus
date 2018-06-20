@@ -108,7 +108,7 @@ var paths = {
     'test-css': 'templates/test/test'
 };
 
-var baseUrl = '/adminlite-plus/';
+var baseUrl = '/adminlte-plus/';
 
 require.config({
     baseUrl: baseUrl,
