@@ -173,7 +173,7 @@ define(['jquery.storageapi.min', 'jquery', 'controlSidebar', 'pushMenu', 'layout
 
     $('[data-toggle="tooltip"]').tooltip();
     return {
-        systemName: 'adminlite-plus',
+        systemName: 'adminlte-plus',
         admin: 'adminlite-plus',
         sysNavMenus: [{
             "resourceid": 1,
