@@ -174,7 +174,7 @@ define(['jquery.storageapi.min', 'jquery', 'controlSidebar', 'pushMenu', 'layout
     $('[data-toggle="tooltip"]').tooltip();
     return {
         systemName: 'adminlte-plus',
-        admin: 'adminlite-plus',
+        admin: 'adminlte-plus',
         sysNavMenus: [{
             "resourceid": 1,
             "name": "首页",
