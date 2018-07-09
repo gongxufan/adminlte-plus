@@ -16,7 +16,7 @@ icheck
 select2
 ztree
 ```
-关于其具体实现可参考：https://zhuanlan.zhihu.com/p/37796924
+关于其具体实现可参考：https://juejin.im/post/5b2b60536fb9a00e594c6969
 ## 兼容性
 IE8+ ff chrome
 ### tips
