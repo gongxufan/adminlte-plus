@@ -71,8 +71,8 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
             };
 
             //页面渲染完毕
-            this.afterRender = function (element) {
-                this.initUI();
+            this.afterRender = function (modelId) {
+                this.initUI(modelId);
             };
             this.addTenant = function () {
                 //配置的人员数据
@@ -272,9 +272,9 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                 that.loadTenantHumans(humanList);
                 that.loadTenantApp(appList);
             };
-            this.initEvent = function () {
+            this.initEvent = function (eventEle) {
                 //全选
-                $(document).on('click', '#tenantCheckAll', function () {
+                eventEle.on('click', '#tenantCheckAll', function () {
                     var rows = that.table.rows();
                     if (this.checked) {
                         rows.select();
@@ -287,7 +287,7 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                     }
                 });
                 //添加租户
-                $(document).on('click', '#addTenantBtn', function () {
+                eventEle.on('click', '#addTenantBtn', function () {
                     that.clearTenantInfo();
                     that.popTitle('新增租户');
                     //每次打开编辑都要把树节点显示出来
@@ -296,11 +296,11 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                     that.allocated(0);
                 });
                 //删除租户
-                $(document).on('click', '#delTenantBtn', function () {
+                eventEle.on('click', '#delTenantBtn', function () {
                     that.delTenant();
                 });
                 //编辑租户弹层
-                $(document).on('click', '#editTenant', function () {
+                eventEle.on('click', '#editTenant', function () {
                     var data = that.table.row($(this).parents('tr')).data();
                     that.popTitle('编辑租户');
                     //租户类型匹配
@@ -390,8 +390,8 @@ define(['dialog', 'common', 'knockout', 'knockout-mapping', 'jquery', 'datatable
                 });
             };
             //构建系统界面
-            this.initUI = function () {
-                this.initEvent();
+            this.initUI = function (modelId) {
+                this.initEvent($('div[data-model="' + modelId + '"]'));
                 this.buildTenantTable();
                 this.loadHumanTree();
                 this.loadApp();

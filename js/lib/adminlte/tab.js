@@ -383,7 +383,7 @@ define(['jquery', 'jquery.blockui'], function ($) {
                     //重置一些变量
                     if (options.pageData.reset)
                         options.pageData.reset();
-                    options.pageData.afterRender();
+                    options.pageData.afterRender(options.pageData.modelId);
                 }
 
             }

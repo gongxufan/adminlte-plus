@@ -213,8 +213,8 @@ define(['role-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
                 $("#modal-add-auth").modal('show');
             };
             //页面渲染完毕
-            this.afterRender = function (element) {
-                this.initEvent();
+            this.afterRender = function (modelId) {
+                this.initEvent($('div[data-model="' + modelId + '"]'));
                 this.initUI();
             };
 
@@ -255,14 +255,14 @@ define(['role-js', 'dialog', 'common', 'knockout', 'knockout-mapping', 'jquery',
                     }
                 });
             };
-            this.initEvent = function () {
+            this.initEvent = function (eventEle) {
                 $("#modal-add-auth").on('show.bs.modal', function () {
                     that.loadAuthTree();
                 });
                 $("#modal-apply-auth").on('shown.bs.modal', function () {
                     that.openApplyAuthWin();
                 });
-                $(document).on('click', '#updateResource', function () {
+                eventEle.on('click', '#updateResource', function () {
                     $(this).parent().parent().addClass('selected');
                     that.updateResource();
                 });

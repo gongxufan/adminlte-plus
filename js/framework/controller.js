@@ -37,7 +37,7 @@ define(['common', 'knockout-multimodels', 'tab', 'jquery', 'router', 'routes', '
                     //绑定的数据模型对象也即每个define模块的返回值
                     //attach代替原有的applyBindings，因为后者只支持一个对象绑定
                     ko.attach(route.routeUrl, pageData);
-                    pageData.afterRender();
+                    pageData.afterRender(route.routeUrl);
                 }
             });
         }
